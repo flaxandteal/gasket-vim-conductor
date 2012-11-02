@@ -1,6 +1,15 @@
-TRAIN: Terminal Receiving Additional Information Non-interactively
+*trainconductor.txt* Train Conductor for VIM
+*trainconductor*
+
+Train: Terminal Receiving Additional Information Non-interactively
 Conductor for VIM
-(trainconductor.vim)
+
+===============================================================================
+CONTENTS                                              *trainconductor-contents*
+         1. Intro............................|trainconductor-intro|
+
+===============================================================================
+1. Intro                                                 *trainconductor-intro*
 
 You will need a train connection to the current terminal for this plugin to
 work. Actually, it is sufficient to have a train Unix domain socket pointed to
