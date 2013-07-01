@@ -57,7 +57,7 @@ class TrainTrain:
 		doc.append(car[1])
 
         track.sendall(ET.tostring(doc, pretty_print=True))
-        track.sendall("\n__TRAIN_CABOOSE__\n")
+        track.sendall("\n__GASKET_CABOOSE__\n")
 
     def shutdown(self):
 	track = self.track
@@ -72,11 +72,11 @@ class TrainTrain:
         if track is None:
 		return
 
-        track.sendall("\n__TRAIN_CABOOSE__\n")
-        track.sendall("\n__TRAIN_CABOOSE__\n")
+        track.sendall("\n__GASKET_CABOOSE__\n")
+        track.sendall("\n__GASKET_CABOOSE__\n")
 
 if not hasattr(vim, "train"):
-    train_track_file = os.getenv("TRAIN_SOCKET")
+    train_track_file = os.getenv("GASKET_SOCKET")
     if train_track_file is not None and train_track_file != "":
         vim.train = TrainTrain(train_track_file, active=False)
     else:

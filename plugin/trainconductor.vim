@@ -14,8 +14,10 @@ set cpo&vim
 let s:TrainConnection = 0
 
 if !hasmapto('<Plug>TrainconductorRedisplay')
-	map <unique> <Leader>l <Plug>TrainconductorRedisplay
+	map <unique> l <Plug>TrainconductorRedisplay
 endif
+
+autocmd VimEnter * call <SID>Startup()
 
 autocmd VimLeave * call <SID>Shutdown()
 
@@ -38,6 +40,14 @@ import trainconductor_vim
 if vim.train is not None:
     vim.command("let s:TrainConnection = 1")
 endpython
+
+function! s:Startup()
+	if !empty(g:GasketOnEnter) && g:GasketOnEnter == 1 && s:TrainConnection == 1
+		python <<endpython
+vim.train.toggle_active()
+endpython
+	endif
+endfunction
 
 function! s:ToggleActive()
 	if s:TrainConnection == 1
