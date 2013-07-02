@@ -42,7 +42,7 @@ if vim.train is not None:
 endpython
 
 function! s:Startup()
-	if !empty(g:GasketOnEnter) && g:GasketOnEnter == 1 && s:TrainConnection == 1
+	if exists("g:GasketOnEnter") && g:GasketOnEnter == 1 && s:TrainConnection == 1
 		python <<endpython
 vim.train.toggle_active()
 endpython
