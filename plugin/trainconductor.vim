@@ -1,7 +1,7 @@
 " Vim global plugin for Train integration
-" Last Change: 2012 Oct 29
-" Maintainer: Phil Weir <phil@philtweir.co.uk>
-" License: This file is PD
+" Last Change: 2015 Jul 29
+" Maintainer: Phil Weir <phil.weir@flaxandteal.co.uk>
+" License: MIT License
 
 if exists("g:loaded_trainconductor")
 	finish

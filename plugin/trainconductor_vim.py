@@ -1,3 +1,8 @@
+# Vim global plugin for Train integration
+# Last Change: 2015 Jul 29
+# Maintainer: Phil Weir <phil.weir@flaxandteal.co.uk>
+# License: MIT License
+
 import vim, os, socket
 import lxml.etree as ET
 import re
